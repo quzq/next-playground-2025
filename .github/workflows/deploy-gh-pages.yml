@@ -32,9 +32,9 @@ jobs:
           node-version: 18
       ## check
       - name: format
-        run: yarn format:check
+        run: npm run format:check
       - name: lint
-        run: yarn lint
+        run: npm run lint
 
       - name: Install dependencies
         run: npm install
