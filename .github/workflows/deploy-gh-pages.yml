@@ -30,14 +30,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install dependencies
+        run: npm install
+
       ## check
       - name: format
         run: npm run format:check
       - name: lint
         run: npm run lint
 
-      - name: Install dependencies
-        run: npm install
       - name: Build
         run: npm ci && npm run build
         env:
